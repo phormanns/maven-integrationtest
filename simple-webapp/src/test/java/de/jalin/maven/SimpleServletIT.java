@@ -64,11 +64,9 @@ public class SimpleServletIT {
 			final InputStreamReader reader = new InputStreamReader(connection.getInputStream());
 			final BufferedReader bf = new BufferedReader(reader);
 			final String readLine = bf.readLine();
-			System.out.println(readLine);
 			Assert.assertEquals("Hello world from SimpleServlet", readLine);
 		} catch (InterruptedException | IOException e) {
 			fail(e.getMessage());
-		} finally {
 		}
 	}
 
